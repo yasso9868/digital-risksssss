@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="https://moe.gov.eg/wwwroot/images/logo.png">
+    <title>المخاطر الرقميه</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <meta name="description" content="تعرف على المخاطر الرقمية وكيفية حماية بياناتك على الإنترنت. Digital risks and how to protect your data online.">
+    <meta name="keywords" content="digital risks, cyber security, المخاطر الرقمية, الأمن السيبراني, حماية البيانات, اختراق, فيروسات, تهديدات رقمية">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="navbar" class="navbar">
+            <!-- Menu Toggle Button for Mobile -->
+            <button class="menu-btn" id="menuToggle" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul id="menu">
+                    <li id="loginButton"><a href="login.html">تسجيل الدخول</a></li>
+                    <li id="userStatus" style="display: none;"><a href="#">مرحبًا، <span id="username"></span></a></li>
+                    <li><a href="#unethical-sites">مكافحة المواقع غير الأخلاقية</a></li>
+                    <li><a href="#digital-transformation">إنجازات التحول الرقمي</a></li>
+                    <li><a href="#fake-news">جهود الدولة ضد الشائعات</a></li>
+                    <li><a href="#safe-internet">الاستخدام الآمن للإنترنت</a></li>
+                    <li><a href="#navbar">الرئيسية</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <h3>المخاطر الرقميه</h3>
+                <div id="line"></div>
+                <img src="https://moe.gov.eg/wwwroot/images/logo.png" alt="Logo">
+            </div>
+        </div>
+    </header>
+
+    <div class="dark-mode-btn-container">
+        <button class="dark-mode-btn" onclick="toggleDarkMode()">🌙</button>
+    </div>
+
+    <main>
+        <!-- Introduction Section -->
+        <section id="intro" class="intro">
+            <h1 data-aos="fade-up">فهم المخاطر الرقميه وكيفية الحماية منها</h1>
+            <p data-aos="fade-up" data-aos-delay="200">المخاطر الرقميه تتزايد يوماً بعد يوم. من الفيروسات إلى الهجمات المعقدة، يحتاج كل مستخدم للإنترنت إلى معرفة كيفية الحماية من هذه المخاطر. في هذا الموقع، سنستعرض أهم المخاطر الرقمية وطرق الحماية منها، بالإضافة إلى جهود الدولة في مكافحة هذه المخاطر.</p>
+        </section>
+
+        <!-- Safe Internet Usage Section -->
+        <section id="safe-internet" class="safe-internet">
+            <h2 data-aos="fade-up">الاستخدام الآمن للإنترنت</h2>
+            <div class="content">
+                <div class="text" data-aos="fade-right">
+                    <p>الإنترنت هو أداة قوية يمكن أن تكون مفيدة أو خطيرة اعتمادًا على كيفية استخدامها. لحماية نفسك، اتبع هذه النصائح:</p>
+                    <ul>
+                        <li>عدم مشاركة المعلومات الشخصية مع الغرباء.</li>
+                        <li>استخدام كلمات مرور قوية وفريدة لكل حساب.</li>
+                        <li>تجنب شبكات الواي فاي العامة غير الآمنة.</li>
+                        <li>تحديث البرامج وأنظمة التشغيل بانتظام.</li>
+                        <li>استخدام برامج مكافحة الفيروسات.</li>
+                    </ul>
+                    <p>يجب أيضًا تجنب النقر على الروابط المشبوهة أو تنزيل الملفات من مصادر غير موثوقة. استخدام شبكات VPN يمكن أن يوفر طبقة إضافية من الأمان عند الاتصال بالإنترنت.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Government Efforts Against Fake News Section -->
+        <section id="fake-news" class="fake-news">
+            <h2 data-aos="fade-up">جهود الدولة في مواجهة الشائعات والأخبار الكاذبة</h2>
+            <div class="content">
+                <div class="text" data-aos="fade-left">
+                    <p>تعمل الدولة على مكافحة الشائعات من خلال:</p>
+                    <ul>
+                        <li>إنشاء منصات رسمية لنشر المعلومات الموثوقة.</li>
+                        <li>تطوير قوانين صارمة لمكافحة الأخبار الكاذبة.</li>
+                        <li>توعية المواطنين بكيفية التحقق من صحة المعلومات.</li>
+                        <li>التعاون مع وسائل الإعلام لنشر الحقائق.</li>
+                    </ul>
+                    <p>تم إنشاء وحدات خاصة في الوزارات للرد على الشائعات بشكل فوري ونشر المعلومات الصحيحة عبر وسائل التواصل الاجتماعي والمنصات الرسمية.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Transformation Achievements Section -->
+        <section id="digital-transformation" class="digital-transformation">
+            <h2 data-aos="fade-up">إنجازات الدولة في مشروعات التحول الرقمي</h2>
+            <div class="content">
+                <div class="text" data-aos="fade-right">
+                    <p>حققت الدولة العديد من الإنجازات في التحول الرقمي، منها:</p>
+                    <ul>
+                        <li>تحويل الخدمات الحكومية إلى خدمات إلكترونية.</li>
+                        <li>إنشاء منصات تعليمية رقمية.</li>
+                        <li>تطوير البنية التحتية للاتصالات.</li>
+                        <li>تعزيز الأمن السيبراني لحماية البيانات.</li>
+                    </ul>
+                    <p>تم إطلاق العديد من المبادرات مثل "مصر الرقمية" لتحقيق التحول الرقمي الشامل وتوفير خدمات إلكترونية عالية الجودة للمواطنين.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unethical Sites Section -->
+        <section id="unethical-sites" class="unethical-sites">
+            <h2 data-aos="fade-up">مكافحة المواقع والمنصات غير الأخلاقية</h2>
+            <div class="content">
+                <div class="text" data-aos="fade-left">
+                    <p>تعمل الدولة على حماية المواطنين من المواقع غير الأخلاقية من خلال:</p>
+                    <ul>
+                        <li>حجب المواقع التي تنشر محتوى غير أخلاقي.</li>
+                        <li>تطوير أدوات للرقابة الأبوية.</li>
+                        <li>توعية المواطنين بمخاطر هذه المواقع.</li>
+                        <li>تعزيز التعاون الدولي لمكافحة هذه المواقع.</li>
+                    </ul>
+                    <p>تم إنشاء وحدات خاصة في وزارة الداخلية لمتابعة وحجب المواقع التي تنشر محتوى غير قانوني أو غير أخلاقي.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="idk">© 2025 Yassen Tarek Mohammed | جميع الحقوق محفوظة</p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script2.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration
+            once: true, // Animation only happens once
+        });
+
+        // Dark Mode Toggle Function
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+
+            // Save user preference in localStorage
+            if (body.classList.contains("dark-mode")) {
+                localStorage.setItem("darkMode", "enabled");
+            } else {
+                localStorage.setItem("darkMode", "disabled");
+            }
+        }
+
+        // Check for dark mode preference on page load
+        document.addEventListener("DOMContentLoaded", () => {
+            const darkMode = localStorage.getItem("darkMode");
+            if (darkMode === "enabled") {
+                document.body.classList.add("dark-mode");
+            }
+        });
+
+        // Login Button Functionality
+        const isLoggedIn = false; // Change this based on your logic
+        const loginButton = document.getElementById("loginButton");
+        const userStatus = document.getElementById("userStatus");
+
+        if (isLoggedIn) {
+            loginButton.style.display = "none";
+            userStatus.style.display = "block";
+            document.getElementById("username").textContent = "User"; // Replace with actual username
+        } else {
+            loginButton.style.display = "block";
+            userStatus.style.display = "none";
+        }
+    </script>
+</body>
+</html>

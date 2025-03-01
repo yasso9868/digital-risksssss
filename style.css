@@ -1,0 +1,609 @@
+/* Global Styles */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+    transition: background-color 0.3s, color 0.3s, transform 0.5s ease-in-out;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #d33434;
+    z-index: 10;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.navbar nav ul li a {
+    color: white;
+    font-size: 18px;
+    padding: 10px;border-radius: 10px;
+    transition:0.3s;
+    text-decoration: none;
+}
+
+
+
+#line{
+    background-color: wheat;
+    height: 50px;
+    width: 3px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.navbar nav ul li:hover {
+    
+ 
+    box-shadow: 0 0 25px rgba(black),
+                0 0 50px rgba(black),
+                0 0 100px rgba(black);
+
+                transform: scale(1.2);
+
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0; /* Light gray text for better readability */
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode p {
+    color: #e0e0e0; /* Light gray text for better readability */
+}
+
+body.dark-mode .navbar {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .content {
+    background-color: #333333;
+    color: #e0e0e0; /* Light gray text for better readability */
+}
+
+body.dark-mode .content .text {
+    color: #e0e0e0; /* Light gray text for better readability */
+}
+
+body.dark-mode .intro {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+}
+
+
+
+
+/* Mobile Menu Button */
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+
+
+/* Dark Mode Button */
+.dark-mode-btn-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.dark-mode-btn {
+    padding: 15px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+/* Sections */
+section {
+    padding: 100px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    background: linear-gradient(135deg, #ffffff, #f4f4f9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.content .text {
+    flex: 1;
+    text-align: right;
+}
+
+.content .text h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #d33434;
+}
+
+.content .text p {
+    font-size: 18px;
+    color: #555;
+}
+
+.content .text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content .text ul li {
+    font-size: 16px;
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.content .text ul li::before {
+    content: "•";
+    color: #d33434;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #d33434;
+    color: white;
+    margin-top: 60px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.idk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Design */
+
+@media (max-width: 400px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .content .text, .content .image {
+        text-align: center;
+    }
+
+        
+    .navbar nav ul.active {
+        display: flex;
+    }
+
+    .navbar nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar nav ul li {
+        margin: 10px 0;
+    }
+
+    .navbar .logo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #line {
+        display: none;
+    }
+}
+
+/* Additional Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.content:hover .image img {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Gradient Background for Sections */
+.intro {
+    background: linear-gradient(135deg, #d33434, #ff6b6b);
+    color: white;
+    padding: 120px 20px;
+}
+
+.intro h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Section Headers */
+section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #d33434;
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #d33434;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Hover Effects for Lists */
+.content .text ul li:hover {
+    color: #d33434;
+    transform: translateX(10px);
+    transition: transform 0.3s, color 0.3s;
+}
+
+/* New Design: Safe Internet Section */
+.safe-internet {
+    background: linear-gradient(135deg, #f4f4f9, #e0e0e0);
+    padding: 100px 20px;
+}
+
+.safe-internet .content {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.safe-internet .content .text ul li::before {
+    color: #45a049; /* Green color for bullet points */
+}
+
+/* New Design: Fake News Section */
+.fake-news {
+    background: linear-gradient(135deg, #e0e0e0, #f4f4f9);
+    padding: 100px 20px;
+}
+
+.fake-news .content {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.fake-news .content .text ul li::before {
+    color: #ff6b6b; /* Red color for bullet points */
+}
+
+/* New Design: Digital Transformation Section */
+.digital-transformation {
+    background: linear-gradient(135deg, #f4f4f9, #e0e0e0);
+    padding: 100px 20px;
+}
+
+.digital-transformation .content {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.digital-transformation .content .text ul li::before {
+    color: #007bff; /* Blue color for bullet points */
+}
+
+/* New Design: Unethical Sites Section */
+.unethical-sites {
+    background: linear-gradient(135deg, #e0e0e0, #f4f4f9);
+    padding: 100px 20px;
+}
+
+.unethical-sites .content {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.unethical-sites .content .text ul li::before {
+    color: #d33434; /* Red color for bullet points */
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode .safe-internet {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+}
+
+body.dark-mode .fake-news {
+    background: linear-gradient(135deg, #333, #1a1a1a);
+}
+
+body.dark-mode .digital-transformation {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+}
+
+body.dark-mode .unethical-sites {
+    background: linear-gradient(135deg, #333, #1a1a1a);
+}
+
+body.dark-mode .content {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-mode .content .text ul li::before {
+    color: #e0e0e0; /* Light gray for bullet points in dark mode */
+} /* Mobile Menu Toggle Button */
+/* ==================== */
+/* Mobile Menu Toggle Button */
+/* ==================== */
+.menu-btn {
+    
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0); /* Default color for light mode */
+    z-index: 1000;
+    position: fixed; /* Fixed position for better accessibility */
+    right: 90%;
+    top: 2%;
+    transition: color 0.3s ease;
+}
+
+/* Dark Mode Button Color */
+body.dark-mode .menu-btn {
+    color: #e0e0e0; /* Light gray for dark mode */
+}
+
+/* ==================== */
+/* Mobile Menu Styles */
+/* ==================== */
+@media (max-width: 1325px) {
+    /* Show the toggle button on mobile */
+    .menu-btn {
+        display: block;
+    }
+
+    /* Default state of the menu (hidden) */
+    .navbar nav ul {
+        display: none; /* Hide the menu by default */
+        flex-direction: column;
+        position: fixed;
+        top: 80px; /* Position below the navbar */
+        right: 0;
+        background-color: #d33434; /* Menu background color */
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 999;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        animation: slideUp 0.3s ease-in-out; /* Animation when closing */
+    }
+
+    /* Active state of the menu (visible) */
+    .navbar nav ul.active {
+        display: flex; /* Show the menu */
+        animation: slideDown 0.3s ease-in-out; /* Animation when opening */
+    }
+
+    /* Menu items */
+    .navbar nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Menu links */
+    .navbar nav ul li a {
+        font-size: 18px;
+        padding: 10px 15px;
+        display: block;
+        color: white;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect for menu links */
+    .navbar nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+    }
+}
+
+/* ==================== */
+/* Menu Animations */
+/* ==================== */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Slide down from top */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px); /* Slide up to top */
+    }
+}
+
+@media (max-width: 1325px) {
+    /* Navbar Layout for Mobile */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    /* Menu Toggle Button */
+    .menu-btn {
+        display: block; /* Show the toggle button */
+        font-size: 24px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: white;
+        z-index: 1000;
+    }
+
+    /* Logo and Title */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        height: 40px; /* Adjust logo size */
+    }
+
+    .logo h3 {
+        color: white;
+        font-size: 24px;
+        margin: 0;
+    }
+
+    /* Default state of the menu (hidden) */
+    .navbar nav ul {
+        display: none; /* Hide the menu by default */
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%; /* Start off-screen */
+        width: 80%; /* Menu width */
+        height: 100vh; /* Full height */
+        background-color: #d33434; /* Menu background color */
+        padding: 20px;
+        z-index: 999;
+        box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+        transition: left 0.3s ease-in-out; /* Smooth slide-in animation */
+    }
+
+    /* Active state of the menu (visible) */
+    .navbar nav ul.active {
+        display: flex; /* Show the menu */
+        left: 0; /* Slide in from the left */
+    }
+
+    /* Return Button */
+    .navbar nav ul .return-btn {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+    }
+
+    .navbar nav ul .return-btn button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    /* Menu items */
+    .navbar nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Menu links */
+    .navbar nav ul li a {
+        font-size: 18px;
+        padding: 10px 15px;
+        display: block;
+        color: white;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect for menu links */
+    .navbar nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+    }
+}

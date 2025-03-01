@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/x-icon" href="https://moe.gov.eg/wwwroot/images/logo.png">
+        <title>المخاطر الرقميه</title>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+        <!-- AOS CSS -->
+        <meta name="description" content="تعرف على المخاطر الرقمية وكيفية حماية بياناتك على الإنترنت. Digital risks and how to protect your data online.">
+        <meta name="keywords" content="digital risks, cyber security, المخاطر الرقمية, الأمن السيبراني, حماية البيانات, اختراق, فيروسات, تهديدات رقمية">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="login.css">
+    </head>
+<body>
+    <header>
+        <div id="navbar" class="navbar">
+            <!-- Menu Toggle Button for Mobile -->
+            <button class="menu-btn" id="menuToggle" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul id="menu">
+                    <li id="loginButton"><a href="login.html">تسجيل الدخول</a></li>
+                    <li id="userStatus" style="display: none;"><a href="#">مرحبًا، <span id="username"></span></a></li>
+                    <li><a href="index.html#unethical-sites">مكافحة المواقع غير الأخلاقية</a></li>
+                    <li><a href="index.html#digital-transformation">إنجازات التحول الرقمي</a></li>
+                    <li><a href="index.html#fake-news">جهود الدولة ضد الشائعات</a></li>
+                    <li><a href="index.html#safe-internet">الاستخدام الآمن للإنترنت</a></li>
+                    <li><a href="index.html#navbar">الرئيسية</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <h3>المخاطر الرقميه</h3>
+                <div id="line"></div>
+                <img src="https://moe.gov.eg/wwwroot/images/logo.png" alt="Logo">
+            </div>
+        </div>
+    </header>
+
+    
+
+    <div class="dark-mode-btn-container">
+        <button class="dark-mode-btn" onclick="toggleDarkMode()">🌙</button>
+    </div>
+
+    <main>
+        <!-- Login Form -->
+        <section class="login-form">
+            <h2>تسجيل الدخول</h2>
+            <p>قم بتسجيل الدخول للوصول إلى المزيد من الميزات أو <a href="index.html">استعرض الموقع كزائر</a>.</p>
+
+            <!-- Email/Password Login -->
+            <form id="emailLoginForm">
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">كلمة المرور:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">تسجيل الدخول</button>
+            </form>
+
+            <!-- Error Message -->
+            <p id="errorMessage" class="error-message"></p>
+
+            <!-- Sign Up Link -->
+            <p>ليس لديك حساب؟ <a href="signup.html">أنشئ حسابًا جديدًا</a></p>
+
+            <!-- OR Divider -->
+            <div class="or-divider">
+                <span>أو</span>
+            </div>
+
+            <!-- Google Sign-In -->
+            <button id="googleLogin" class="google-btn">
+                <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Logo">
+                تسجيل الدخول باستخدام Google
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p class="idk">© 2025 Yassen Tarek Mohammed | جميع الحقوق محفوظة</p>
+    </footer>
+
+    <!-- Firebase SDK (Compatibility Version) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
